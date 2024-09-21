@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdint.h>
+int main() {
+    //辗转相除法,
+    uint32_t a,b;
+    int x;
+    printf("请输入两数(中间以一个空格间隔)");
+    scanf("%d %d",&a,&b);
+    while(b!=0){
+    x=a%b;
+    a=b;
+    b=x;
+    }
+    printf("他们的最大公约数为%d",a);
+    return 0;
+}
